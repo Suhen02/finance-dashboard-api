@@ -48,7 +48,7 @@ Roles: `viewer` < `analyst` < `admin`
 
 Headers: `X-User-Id` (int), `X-User-Role` (viewer|analyst|admin)
 
-> ⚠️ **Production note**: Replace header-based RBAC with JWT token validation. Headers can be spoofed.
+> **Production note**: Replace header-based RBAC with JWT token validation. Headers can be spoofed.
 
 ## Quick Start
 
