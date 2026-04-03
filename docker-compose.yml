@@ -13,17 +13,17 @@ services:
       - app-data:/app/logs
 
   # Optional: uncomment for PostgreSQL
-  # db:
-  #   image: postgres:16-alpine
-  #   environment:
-  #     POSTGRES_USER: finance
-  #     POSTGRES_PASSWORD: finance_pass
-  #     POSTGRES_DB: finance_db
-  #   ports:
-  #     - "5432:5432"
-  #   volumes:
-  #     - pg-data:/var/lib/postgresql/data
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: finance
+      POSTGRES_PASSWORD: finance_pass
+      POSTGRES_DB: finance_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
 
 volumes:
   app-data:
-  # pg-data:
+  pg-data:
