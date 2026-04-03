@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./finance.db
+      - DEBUG=false
+      - SECRET_KEY=change-me-in-production
+    volumes:
+      - app-data:/app/logs
+
+  # Optional: uncomment for PostgreSQL
+  # db:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_USER: finance
+  #     POSTGRES_PASSWORD: finance_pass
+  #     POSTGRES_DB: finance_db
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - pg-data:/var/lib/postgresql/data
+
+volumes:
+  app-data:
+  # pg-data:
