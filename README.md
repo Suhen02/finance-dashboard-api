@@ -1,6 +1,6 @@
 # Finance Dashboard API
 
-Production-grade backend system built with FastAPI demonstrating clean architecture, RBAC, and containerized deployment.
+A backend API built with FastAPI for managing financial records and users, designed using clean architecture principles, RBAC, and containerized deployment.
 
 ## Architecture
 
@@ -103,6 +103,20 @@ All errors return:
 
 No raw `HTTPException` — all errors flow through `AppException` → global handler.
 
+## Deployment
+
+The API is deployed on **Render** with a containerized setup and PostgreSQL database.
+
+- Platform: Render  
+- Deployment Type: Docker  
+- Database: PostgreSQL  
+
+Live API:  
+https://finance-dashboard-api-rcgp.onrender.com  
+
+Swagger Docs:  
+https://finance-dashboard-api-rcgp.onrender.com/docs
+
 ## Future Improvements
 
 - JWT authentication with refresh tokens
@@ -111,6 +125,5 @@ No raw `HTTPException` — all errors flow through `AppException` → global han
 - Cursor-based pagination
 - Alembic migrations
 - PostgreSQL `date_trunc` for monthly trends
-- CI/CD pipeline
 - Unit & integration test suite
-# finance-dashboard-api
+
